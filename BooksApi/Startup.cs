@@ -27,13 +27,14 @@ namespace BooksApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.Configure<BookstoreDatabaseSettings>(
-                    Configuration.GetSection(nameof(BookstoreDatabaseSettings)));
+            services.Configure<ConFusionDatabaseSettings>(
+                    Configuration.GetSection(nameof(ConFusionDatabaseSettings)));
 
-            services.AddSingleton<IBookstoreDatabaseSettings>(sp =>
-                sp.GetRequiredService<IOptions<BookstoreDatabaseSettings>>().Value);
+            services.AddSingleton<IConFusionDatabaseSettings>(sp =>
+                sp.GetRequiredService<IOptions<ConFusionDatabaseSettings>>().Value);
 
-            services.AddSingleton<BookService>();
+            //services.AddSingleton<BookService>();
+            services.AddSingleton<DishService>();
 
             services.AddMvc()
                 .AddJsonOptions(options => options.UseMemberCasing())
