@@ -11,7 +11,7 @@ namespace BooksApi.Models
 
         public string dish { get; set; }
 
-        public string rating { get; set; }
+        public double rating { get; set; }
 
         public string comment { get; set; }
 
