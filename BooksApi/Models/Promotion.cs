@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace BooksApi.Models
 {
-    public class Promotions
+    public class Promotion
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]

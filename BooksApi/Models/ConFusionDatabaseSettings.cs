@@ -6,6 +6,7 @@
         public string promotionsCollectionName { get; set; }
         public string leadershipCollectionName { get; set; }
         public string feedbackCollectionName { get; set; }
+        public string commentCollectionName { get; set; }
 
         public string ConnectionString { get; set; }
         public string DatabaseName { get; set; }
@@ -17,6 +18,7 @@
         string promotionsCollectionName { get; set; }
         string leadershipCollectionName { get; set; }
         string feedbackCollectionName { get; set; }
+        string commentCollectionName { get; set; }
 
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }

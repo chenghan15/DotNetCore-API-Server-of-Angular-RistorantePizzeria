@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace BooksApi.Models
 {
-    public class feedback
+    public class Feedback
     {
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
@@ -19,7 +19,7 @@ namespace BooksApi.Models
 
         public string email { get; set; }
 
-        public string agree { get; set; }
+        public bool agree { get; set; }
 
         public string contacttype { get; set; }
 

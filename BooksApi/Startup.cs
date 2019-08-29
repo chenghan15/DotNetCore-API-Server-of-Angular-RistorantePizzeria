@@ -35,6 +35,7 @@ namespace BooksApi
 
             //services.AddSingleton<BookService>();
             services.AddSingleton<DishService>();
+            services.AddSingleton<FeedbackService>();
 
             services.AddMvc()
                 .AddJsonOptions(options => options.UseMemberCasing())

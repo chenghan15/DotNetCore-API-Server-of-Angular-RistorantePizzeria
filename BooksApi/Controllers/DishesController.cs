@@ -38,7 +38,7 @@ namespace BooksApi.Controllers
         {
             _dishService.Create(dish);
 
-            return CreatedAtRoute("GetBook", new { id = dish.Id.ToString() }, dish);
+            return CreatedAtRoute("GetDish", new { id = dish.Id.ToString() }, dish);
         }
 
         [HttpPut("{id:length(24)}")]

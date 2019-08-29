@@ -113,87 +113,87 @@ db.dishes.insertMany([
       "agree": true,
       "contacttype": "Email",
       "message": "faewfar",
-      "id": 1
+      "id": "1"
     },
     {
       "firstname": "sdff",
       "lastname": "sdaf",
-      "telnum": 0,
+      "telnum": "0",
       "email": "asdf@dsf",
       "agree": true,
       "contacttype": "Tel",
       "message": "sdafsa",
-      "id": 2
+      "id": "2"
     },
     {
       "firstname": "dsf",
       "lastname": "dsaf",
-      "telnum": 0,
+      "telnum": "0",
       "email": "dsafa@sadfas",
       "agree": true,
       "contacttype": "Email",
       "message": "sdaff",
-      "id": 3
+      "id": "3"
     },
     {
       "firstname": "dfsf",
       "lastname": "sdaf",
-      "telnum": 0,
+      "telnum": "0",
       "email": "sdads@sdaf",
       "agree": false,
       "contacttype": "None",
       "message": "dsafa",
-      "id": 4
+      "id": "4"
     },
     {
       "firstname": "sfd",
       "lastname": "dsa",
-      "telnum": 0,
+      "telnum": "0",
       "email": "dsafa@sadfas",
       "agree": false,
       "contacttype": "None",
       "message": "sdafa",
-      "id": 5
+      "id": "5"
     },
     {
       "firstname": "fs",
       "lastname": "fdsaf",
-      "telnum": 0,
+      "telnum": "0",
       "email": "dasdfs@sdf",
       "agree": false,
       "contacttype": "None",
       "message": "sdafsa",
-      "id": 6
+      "id": "6"
     },
     {
       "firstname": "fsdgsd",
       "lastname": "fdgds",
-      "telnum": 0,
+      "telnum": "0",
       "email": "dfvgfds@sdff",
       "agree": false,
       "contacttype": "None",
       "message": "sdafas",
-      "id": 7
+      "id": "7"
     },
     {
       "firstname": "b'v'c'b",
       "lastname": " x'c'v'b'v",
-      "telnum": 0,
+      "telnum": "0",
       "email": "fdgs@gmai",
       "agree": false,
       "contacttype": "None",
       "message": "dsafaf",
-      "id": 8
+      "id": "8"
     },
     {
       "firstname": "sdafa",
       "lastname": "asdfsa",
-      "telnum": 0,
+      "telnum": "0",
       "email": "fdas@dsa",
       "agree": false,
       "contacttype": "None",
       "message": "sadfa",
-      "id": 9
+      "id": "9"
     },
     {
       "firstname": "fdgs",
@@ -203,41 +203,41 @@ db.dishes.insertMany([
       "agree": null,
       "contacttype": null,
       "message": "sadfasf",
-      "id": 10
+      "id": "10"
     }
   ])	
   
   db.comments.insertMany([ 
         {
-		  "dish": 0,
+		  "dish": "0",
           "rating": 5,
           "comment": "Imagine all the eatables, living in conFusion!",
           "author": "John Lemon",
           "date": "2012-10-16T17:57:28.556094Z"
         },
         {
-		  "dish": 1,
+		  "dish": "1",
           "rating": 4,
           "comment": "Sends anyone to heaven, I wish I could get my mother-in-law to eat it!",
           "author": "Paul McVites",
           "date": "2014-09-05T17:57:28.556094Z"
         },
         {
-		  "dish": 2,
+		  "dish": "2",
           "rating": 3,
           "comment": "Eat it, just eat it!",
           "author": "Michael Jaikishan",
           "date": "2015-02-13T17:57:28.556094Z"
         },
         {
-		  "dish": 3,
+		  "dish": "3",
           "rating": 4,
           "comment": "Ultimate, Reaching for the stars!",
           "author": "Ringo Starry",
           "date": "2013-12-02T17:57:28.556094Z"
         },
         {
-		  "dish": 0,
+		  "dish": "0",
           "rating": 2,
           "comment": "It's your birthday, we're gonna party!",
           "author": "25 Cent",
