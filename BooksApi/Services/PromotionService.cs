@@ -23,6 +23,10 @@ namespace BooksApi.Services
         public Promotion Get(string id) =>
             _promotions.Find<Promotion>(promotion => promotion.Id == id).FirstOrDefault();
 
+        public List<Promotion> Get(bool featured) =>
+            _promotions.Find(promotion => promotion.featured == featured).ToList();
+        //_promotions.Find<Promotion>(promotion => promotion.featured == featured).FirstOrDefault();
+
         public Promotion Create(Promotion promotion)
         {
             _promotions.InsertOne(promotion);

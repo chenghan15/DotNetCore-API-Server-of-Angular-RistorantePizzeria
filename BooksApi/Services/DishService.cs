@@ -25,6 +25,13 @@ namespace BooksApi.Services
         public Dish Get(string id) =>
             _dishes.Find<Dish>(dish => dish.Id == id).FirstOrDefault();
 
+        public Dish GetById(string id) =>
+            _dishes.Find<Dish>(dish => dish.id == id).FirstOrDefault();
+
+        public List<Dish> Get(bool featured) =>
+            _dishes.Find(dish => dish.featured == featured).ToList();
+        //_dishes.Find<Dish>(dish => dish.featured == featured).FirstOrDefault();
+
         public Dish Create(Dish dish)
         {
             _dishes.InsertOne(dish);

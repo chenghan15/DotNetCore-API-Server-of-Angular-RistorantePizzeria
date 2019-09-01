@@ -21,6 +21,8 @@ namespace BooksApi.Models
 
         public string description { get; set; }
 
-        public decimal price { get; set; }
+        //public decimal price { get; set; }
+
+        public string price { get; set; }
     }
 }

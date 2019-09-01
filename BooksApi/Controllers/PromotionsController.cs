@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace BooksApi.Controllers
 {
-    [Route("promotion/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class PromotionsController : ControllerBase
     {
@@ -31,6 +31,20 @@ namespace BooksApi.Controllers
             }
 
             return promotion;
+        }
+
+        [HttpGet("[action]")]
+        // Featured? test1 = 1 & test2 = 3
+        public ActionResult<List<Promotion>> Featured(string test1, string test2)
+        {
+            return _promotionService.Get(true);
+
+            //if (promotion == null)
+            //{
+            //    return NotFound();
+            //}
+
+            //return promotion;
         }
 
         [HttpPost]

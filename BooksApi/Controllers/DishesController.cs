@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace BooksApi.Controllers
 {
-    [Route("dish/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class DishesController : ControllerBase
     {
@@ -20,7 +20,7 @@ namespace BooksApi.Controllers
         public ActionResult<List<Dish>> Get() =>
             _dishService.Get();
 
-        [HttpGet("{id:length(24)}", Name = "GetDish")]
+        [HttpGet("{id:length(24)}")]
         public ActionResult<Dish> Get(string id)
         {
             var dish = _dishService.Get(id);
@@ -31,6 +31,33 @@ namespace BooksApi.Controllers
             }
 
             return dish;
+        }
+
+        [HttpGet("{id}")]
+        public ActionResult<Dish> GetById(string id)
+        {
+            var dish = _dishService.GetById(id);
+
+            if (dish == null)
+            {
+                return NotFound();
+            }
+
+            return dish;
+        }
+
+        [HttpGet("[action]")]
+        // Featured? test1 = 1 & test2 = 3
+        public ActionResult<List<Dish>> Featured(string test1, string test2)
+        {
+            return _dishService.Get(true);
+
+            //if (dish == null)
+            //{
+            //    return NotFound();
+            //}
+
+            //return dish;
         }
 
         [HttpPost]

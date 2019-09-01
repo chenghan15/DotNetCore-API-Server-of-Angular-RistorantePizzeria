@@ -23,6 +23,10 @@ namespace BooksApi.Services
         public Leadership Get(string id) =>
             _leaderships.Find<Leadership>(leadership => leadership.Id == id).FirstOrDefault();
 
+        public List<Leadership> Get(bool featured) =>
+            _leaderships.Find(leadership => leadership.featured == featured).ToList();
+        //_leaderships.Find<Leadership>(leadership => leadership.featured == featured).FirstOrDefault();
+
         public Leadership Create(Leadership leadership)
         {
             _leaderships.InsertOne(leadership);

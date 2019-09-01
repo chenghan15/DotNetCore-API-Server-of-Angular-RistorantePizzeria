@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace BooksApi.Controllers
 {
-    [Route("comment/[controller]")]
+    [Route("[controller]")]
     [ApiController]
     public class CommentsController : ControllerBase
     {

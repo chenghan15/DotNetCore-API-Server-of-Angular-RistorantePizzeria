@@ -22,6 +22,8 @@ namespace BooksApi
             Configuration = configuration;
         }
 
+        readonly string MyAllowSpecificOrigins = "_myAllowSpecificOrigins";
+
         public IConfiguration Configuration { get; }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -40,6 +42,18 @@ namespace BooksApi
             services.AddSingleton<PromotionService>();
             services.AddSingleton<CommentService>();
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy(MyAllowSpecificOrigins,
+                builder =>
+                {
+                    builder.WithOrigins("http://localhost:4200",
+                                        "http://www.contoso.com")
+                                        .AllowAnyHeader()
+                                        .AllowAnyMethod(); 
+                });
+            });
+
             services.AddMvc()
                 .AddJsonOptions(options => options.UseMemberCasing())
                 .SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
@@ -57,6 +71,10 @@ namespace BooksApi
                 // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
                 app.UseHsts();
             }
+
+            app.UseCors(MyAllowSpecificOrigins);
+
+            app.UseStaticFiles();
 
             app.UseHttpsRedirection();
             app.UseMvc();
