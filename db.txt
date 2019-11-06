@@ -94,7 +94,7 @@ db.dishes.insertMany([
     },
     {
       "id": "3",
-      "name": "Alberto Somayya",
+      "name": "Alberto Lee",
       "image": "images/alberto.png",
       "designation": "Executive Chef",
       "featured": true,

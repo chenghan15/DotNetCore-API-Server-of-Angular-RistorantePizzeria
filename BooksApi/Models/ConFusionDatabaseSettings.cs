@@ -1,4 +1,4 @@
-﻿namespace BooksApi.Models
+﻿namespace ConFusionApi.Models
 {
     public class ConFusionDatabaseSettings : IConFusionDatabaseSettings
     {

@@ -1,9 +1,9 @@
-﻿using BooksApi.Models;
-using BooksApi.Services;
+﻿using ConFusionApi.Models;
+using ConFusionApi.Services;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
 
-namespace BooksApi.Controllers
+namespace ConFusionApi.Controllers
 {
     [Route("[controller]")]
     [ApiController]

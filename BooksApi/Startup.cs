@@ -2,8 +2,8 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using BooksApi.Models;
-using BooksApi.Services;
+using ConFusionApi.Models;
+using ConFusionApi.Services;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,7 +13,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 
-namespace BooksApi
+namespace ConFusionApi
 {
     public class Startup
     {
@@ -35,7 +35,6 @@ namespace BooksApi
             services.AddSingleton<IConFusionDatabaseSettings>(sp =>
                 sp.GetRequiredService<IOptions<ConFusionDatabaseSettings>>().Value);
 
-            //services.AddSingleton<BookService>();
             services.AddSingleton<DishService>();
             services.AddSingleton<FeedbackService>();
             services.AddSingleton<LeadershipService>();

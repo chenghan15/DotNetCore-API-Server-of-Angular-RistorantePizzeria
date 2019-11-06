@@ -3,7 +3,7 @@ using MongoDB.Bson.Serialization.Attributes;
 using Newtonsoft.Json;
 using System.Collections.Generic;
 
-namespace BooksApi.Models
+namespace ConFusionApi.Models
 {
     public class Dish
     {
